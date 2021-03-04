@@ -17,8 +17,6 @@ class Filter extends Component {
         this.setState({ [name]: value });
 
         onSearch(filter);
-
-        if (contactsListToShow.length < 0) {return  alert('Nothing found') };
     };
 
     render() {

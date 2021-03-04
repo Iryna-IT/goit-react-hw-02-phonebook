@@ -8,13 +8,16 @@ class ContactList extends Component {
     render() {
         const { contacts } = this.props;
         const { onDelete } = this.props;
-        return (
-            <ul className='contact-list' >
-                {contacts.map((contact) => (
-                    <Contact key={contact.id} id={contact.id} name={contact.name} number={contact.number} onDelete={onDelete}/>
-                ))}
-            </ul>
-        );
+        if (contacts.length === 0) { return <div>Nothing found</div>} else
+        {
+    return (
+        <ul className='contact-list' >
+            {contacts.map((contact) => (
+                <Contact key={contact.id} id={contact.id} name={contact.name} number={contact.number} onDelete={onDelete} />
+            ))}
+        </ul>
+    );
+}
     };
 }
 

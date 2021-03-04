@@ -36,12 +36,12 @@ class App extends Component {
 
   filterContact = (filter) => { 
     this.setState({ filter });
-    console.log(`filter: ${filter}`);
   };
 
   getContactsListToShow = () => {
     const { contacts, filter } = this.state;
-    return contacts.filter(contact => contact.name.toUpperCase().includes(filter.toUpperCase()));
+    if (filter === "") { return contacts }
+    else { return contacts.filter(contact => contact.name.toUpperCase().includes(filter.toUpperCase())); } 
   }
 
   checkUnique = (name) => { 
