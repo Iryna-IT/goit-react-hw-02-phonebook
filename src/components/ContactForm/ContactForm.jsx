@@ -48,7 +48,7 @@ class ContactForm extends Component {
             </div>
             <div>
                 <label htmlFor="phone" className="label-contact">Phone</label>
-                <input type="tel" className="input-contact" name="number" value={this.state.number} placeholder="Enter phone XXX-XX-XX" onChange={this.handleChange} required></input>
+                <input type="tel" className="input-contact" name="number" value={this.state.number} placeholder="Enter phone XXX-XX-XX" pattern="^(\d{3})-\d{2}-\d{2}$" onChange={this.handleChange} required></input>
             </div>
             <button type="submit" className="btn-add" onSubmit={this.handleSubmit}>Add contact</button>
         </form>
