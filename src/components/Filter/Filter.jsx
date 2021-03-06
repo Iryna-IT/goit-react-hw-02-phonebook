@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
 import './Filter.css';
-import ContactList from '../ContactList';
 
 class Filter extends Component {
     state = {
@@ -10,7 +8,7 @@ class Filter extends Component {
     }
     
     handleChange = e => {
-        const { onSearch, contactsListToShow } = this.props;
+        const { onSearch} = this.props;
         const { filter } = this.state;
         const { name, value } = e.currentTarget;
 

@@ -1,0 +1,11 @@
+{
+    "extends": [
+        // "some-other-config-you-use",
+        "react-app",
+        "prettier"
+    ],
+
+    "plugins": [
+        "pretiier"
+    ]
+}
