@@ -1,8 +1,24 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import styles from './ContactList.module.css';
 
 class ContactList extends Component {
+  static defaultProps = {
+    contacts: [],
+  };
+
+  static propTypes = {
+    contacts: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        number: PropTypes.string.isRequired,
+      }),
+    ),
+    onDelete: PropTypes.func,
+  };
+
   render() {
     const { contacts } = this.props;
     const { onDelete } = this.props;
@@ -27,6 +43,19 @@ class ContactList extends Component {
 }
 
 class Contact extends Component {
+  static defaultProps = {
+    id: '',
+    name: '',
+    number: '',
+  };
+
+  static propTypes = {
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    number: PropTypes.string.isRequired,
+    onDelete: PropTypes.func,
+  };
+
   handleDelete = e => {
     const { onDelete } = this.props;
     const contactId = e.target.parentNode.id;

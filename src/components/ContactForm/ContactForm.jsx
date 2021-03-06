@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import styles from './ContactForm.module.css';
 import { v4 as uuidv4 } from 'uuid';
@@ -7,6 +8,11 @@ class ContactForm extends Component {
   state = {
     name: '',
     number: '',
+  };
+
+  static propTypes = {
+    onAdd: PropTypes.func,
+    onCheckUnique: PropTypes.func,
   };
 
   handleChange = e => {

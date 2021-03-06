@@ -1,10 +1,28 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import styles from './Filter.module.css';
 
 class Filter extends Component {
   state = {
     filter: '',
+  };
+
+  static defaultProps = {
+    contactsListToShow: [],
+    filter: '',
+  };
+
+  static propTypes = {
+    contactsListToShow: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        number: PropTypes.string.isRequired,
+      }),
+    ),
+    filter: PropTypes.string.isRequired,
+    onSearch: PropTypes.func.isRequired,
   };
 
   handleChange = e => {

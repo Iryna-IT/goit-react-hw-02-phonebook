@@ -18,22 +18,6 @@ class App extends Component {
     filter: '',
   };
 
-  static defaultProps = {
-    contacts: [],
-    filter: '',
-  };
-
-  static propTypes = {
-    contacts: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.string.isRequired,
-        name: PropTypes.string.isRequired,
-        isOnline: PropTypes.string.isRequired,
-      }),
-    ),
-    filter: PropTypes.string,
-  };
-
   addContact = newContact => {
     this.setState(({ contacts }) => ({ contacts: [newContact, ...contacts] }));
   };
