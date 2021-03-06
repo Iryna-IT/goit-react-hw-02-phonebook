@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './Filter.css';
+import styles from './Filter.module.css';
 
 class Filter extends Component {
   state = {
@@ -19,14 +19,14 @@ class Filter extends Component {
 
   render() {
     return (
-      <form className="form-search">
-        <label htmlFor="filter" className="label-search">
+      <form className={styles.form_search}>
+        <label htmlFor="filter" className={styles.label_search}>
           Find contacts by name
         </label>
         <input
           type="text"
           name="filter"
-          className="input-search"
+          className={styles.input_search}
           placeholder="Enter the name"
           onChange={this.handleChange}
         ></input>

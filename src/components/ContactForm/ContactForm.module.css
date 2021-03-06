@@ -2,12 +2,12 @@ div {
   margin-bottom: 20px;
 }
 
-.label-contact {
+.label_contact {
   margin-right: 30px;
   font-weight: 600;
 }
 
-.input-contact {
+.input_contact {
   padding: 10px;
   width: 75%;
   height: 50px;
@@ -16,12 +16,12 @@ div {
   border-radius: 5px;
 }
 
-.input-contact:focus {
+.input_contact:focus {
   border: 3px solid olive;
   box-shadow: 0px 4px 10px 4px rgba(190, 190, 115, 0.4);
 }
 
-.form-contact {
+.form_contact {
   padding: 30px 30px;
   width: 100%;
   color: black;
@@ -29,7 +29,7 @@ div {
   background-color: lightyellow;
 }
 
-.btn-add {
+.btn_add {
   cursor: pointer;
   width: 100%;
   height: 50px;
@@ -43,7 +43,7 @@ div {
   box-shadow: 0px 4px 10px 4px rgba(190, 190, 115, 0.4);
   transition: all 300ms ease;
 }
-.btn-add:hover {
+.btn_add:hover {
   border: 2px solid olive;
   background-color: rgb(197, 197, 62);
   box-shadow: 0px 4px 10px 4px rgba(193, 212, 16, 0.8);

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './ContactList.css';
+import styles from './ContactList.module.css';
 
 class ContactList extends Component {
   render() {
@@ -10,7 +10,7 @@ class ContactList extends Component {
       return <div>Nothing found</div>;
     } else {
       return (
-        <ul className="contact-list">
+        <ul className={styles.contact_list}>
           {contacts.map(contact => (
             <Contact
               key={contact.id}
@@ -30,19 +30,18 @@ class Contact extends Component {
   handleDelete = e => {
     const { onDelete } = this.props;
     const contactId = e.target.parentNode.id;
-    console.log(e.target.parentNode.id);
     onDelete(contactId);
   };
 
   render() {
     const { id, name, number } = this.props;
     return (
-      <li className="contact-item" id={id}>
+      <li className={styles.contact_item} id={id}>
         {' '}
         {name} : {number}
         <button
           type="button"
-          className="btn-delete"
+          className={styles.btn_delete}
           onClick={this.handleDelete}
         >
           Delete
