@@ -6,6 +6,6 @@
     ],
 
     "plugins": [
-        "pretiier"
+        "prettier"
     ]
 }

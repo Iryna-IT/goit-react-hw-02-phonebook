@@ -5,11 +5,9 @@ import App from './components/App';
 
 import 'modern-normalize';
 
-
-
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
