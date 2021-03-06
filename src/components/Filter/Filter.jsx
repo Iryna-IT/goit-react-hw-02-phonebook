@@ -3,27 +3,35 @@ import React, { Component } from 'react';
 import './Filter.css';
 
 class Filter extends Component {
-    state = {
-        filter: '',
-    }
-    
-    handleChange = e => {
-        const { onSearch} = this.props;
-        const { filter } = this.state;
-        const { name, value } = e.currentTarget;
+  state = {
+    filter: '',
+  };
 
-        this.setState({ [name]: value });
+  handleChange = e => {
+    const { onSearch } = this.props;
+    const { filter } = this.state;
+    const { name, value } = e.currentTarget;
 
-        onSearch(filter);
-    };
+    this.setState({ [name]: value });
 
-    render() {
-        return (
-            <form className="form-search">
-                <label htmlFor="filter" className="label-search">Find contacts by name</label>
-                <input type="text" name="filter" className="input-search"  placeholder="Enter the name" onChange={this.handleChange}></input>
-            </form>
-        )
-    }
+    onSearch(filter);
+  };
+
+  render() {
+    return (
+      <form className="form-search">
+        <label htmlFor="filter" className="label-search">
+          Find contacts by name
+        </label>
+        <input
+          type="text"
+          name="filter"
+          className="input-search"
+          placeholder="Enter the name"
+          onChange={this.handleChange}
+        ></input>
+      </form>
+    );
+  }
 }
 export default Filter;
